@@ -17,6 +17,7 @@ public class GameClient{
             String fromUser = "";
             String fromServer = "";
             String userName = "";
+
             WelcomeScreen welcomeScreen = new WelcomeScreen();
             userName = welcomeScreen.userNameTextField.getText();
             System.out.println(userName);

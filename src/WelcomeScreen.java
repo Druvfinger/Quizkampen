@@ -7,7 +7,7 @@ public class WelcomeScreen extends JFrame implements ActionListener {
     JPanel backPanel = new JPanel(new BorderLayout());
     JLabel welcomeText = new JLabel("Welcome to our Quiz Game!");
     JButton newGameButton = new JButton("New Game");
-    JTextField userNameTextField = new JTextField("Write your username:");
+    JTextField userNameTextField = new JTextField("Write your username:",20);
 
     public WelcomeScreen() {
         add(backPanel);
