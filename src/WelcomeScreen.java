@@ -28,16 +28,12 @@ public class WelcomeScreen extends JFrame implements ActionListener {
         return userNameTextField.getText();
     }
 
-    public static void main(String[] args) {
-        WelcomeScreen welcomeScreen = new WelcomeScreen();
-    }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == newGameButton){
             setVisible(false);
-            GameScreen gameScreen = new GameScreen();
-            gameScreen.setVisible(true);
+            CategoryScreen categoryScreen = new CategoryScreen();
+            categoryScreen.setVisible(true);
         }
     }
 }

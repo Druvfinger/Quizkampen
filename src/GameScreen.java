@@ -34,9 +34,6 @@ public class GameScreen extends JFrame implements ActionListener {
 
     }
 
-    public static void main(String[] args) {
-        GameScreen gameScreen = new GameScreen();
-    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
