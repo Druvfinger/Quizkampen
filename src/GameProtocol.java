@@ -1,5 +1,6 @@
 public class GameProtocol {
 
+    // klass som hanterar hur programet ska köras
     protected final int WAITING = 0;
     protected final int QUESTION_1_SENT = 1;
     protected final int QUESTION_2_SENT = 2;

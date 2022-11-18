@@ -4,6 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class WelcomeScreen extends JFrame implements ActionListener {
+
+    //klass för en välkomstskärmen
+
     JPanel backPanel = new JPanel(new BorderLayout());
     JLabel welcomeText = new JLabel("Welcome to our Quiz Game!");
     JButton newGameButton = new JButton("New Game");

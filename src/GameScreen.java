@@ -2,9 +2,14 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 public class GameScreen extends JFrame implements ActionListener {
-    GameProtocol gp;
+
+    //klass för själva spelet
+
+    GameProtocol gp = new GameProtocol();
+    Database database = new Database();
     JPanel gamePanel = new JPanel(new BorderLayout());
     JPanel answerButtonPanel = new JPanel(new GridLayout(2,2));
     JPanel labelPanel = new JPanel(new BorderLayout());
@@ -15,6 +20,7 @@ public class GameScreen extends JFrame implements ActionListener {
     JButton answerThree = new JButton("3");
     JButton answerFour = new JButton("4"); // don't keep numbers in here just for test
     GameScreen(){
+
 
         add(gamePanel);
         answerButtonPanel.add(answerOne);
@@ -37,8 +43,5 @@ public class GameScreen extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-       gp = new GameProtocol();
-       if (e.getSource() == answerTwo){
-       }
     }
 }

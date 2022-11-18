@@ -7,6 +7,8 @@ import java.util.List;
 
 public class CategoryScreen extends JFrame implements ActionListener {
 
+    //skärm för att välja kategori
+
     JPanel backpanel = new JPanel(new BorderLayout());
     JPanel optionspanel = new JPanel(new GridLayout(2, 2));
     JLabel chooseCategory = new JLabel("Choose Category");
@@ -37,11 +39,6 @@ public class CategoryScreen extends JFrame implements ActionListener {
         setSize(400, 400);
 
     }
-
-    public static void main(String[] args) {
-        CategoryScreen categoryScreen = new CategoryScreen();
-    }
-
     @Override
     public void actionPerformed(ActionEvent e) {
      backpanel.add(goToGame,BorderLayout.CENTER);
