@@ -7,6 +7,13 @@ public class GameProtocol {
     protected final int ANSWER_SENT = 3;
 
     protected final int NUMQUESTIONS = 2;
+    private int NUMROOUNDS = 1;
+    protected String username = "";
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     protected int state = WAITING;
 
     public int currentQuestion = 0;

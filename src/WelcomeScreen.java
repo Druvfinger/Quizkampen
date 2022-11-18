@@ -8,18 +8,26 @@ public class WelcomeScreen extends JFrame implements ActionListener {
     //klass för en välkomstskärmen
 
     JPanel backPanel = new JPanel(new BorderLayout());
+    JPanel userNamePanel = new JPanel();
     JLabel welcomeText = new JLabel("Welcome to our Quiz Game!");
     JButton newGameButton = new JButton("New Game");
-    JTextField userNameTextField = new JTextField("Write your username:",20);
+    JLabel userNameLabel = new JLabel("Write your username:");
+    JTextField userNameTextField = new JTextField(20);
+    JButton userNameSubmmitButton = new JButton("Submit");
+
+    GameProtocol gameProtocol = new GameProtocol();
 
     public WelcomeScreen() {
         add(backPanel);
+        userNamePanel.add(userNameLabel);
+        userNamePanel.add(userNameTextField);
+        userNamePanel.add(userNameSubmmitButton);
+        userNameSubmmitButton.addActionListener(e ->  {
+            gameProtocol.setUsername(userNameTextField.getText());
+        });
         backPanel.add(welcomeText,BorderLayout.NORTH);
         backPanel.add(newGameButton,BorderLayout.SOUTH);
-        backPanel.add(userNameTextField,BorderLayout.WEST);
-        userNameTextField.addActionListener(e -> {
-            String userName = userNameTextField.getText();
-        });
+        backPanel.add(userNamePanel,BorderLayout.WEST);
         newGameButton.addActionListener(this);
 
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -27,8 +35,9 @@ public class WelcomeScreen extends JFrame implements ActionListener {
         setLocationRelativeTo(null);
         setSize(400,400);
     }
-    public String getUserName(){
-        return userNameTextField.getText();
+
+    public static void main(String[] args) {
+        WelcomeScreen welcomeScreen = new WelcomeScreen();
     }
 
     @Override
